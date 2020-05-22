@@ -1,0 +1,164 @@
+.container {
+  width: 1280px;
+  margin: 50px auto;
+}
+.limitContainer {
+  display: inline-block;
+  margin-top: 15px;
+}
+.globalSearchContainer {
+  float: right;
+  margin-right: 200px;
+  margin-bottom: 20px;
+}
+table {
+  width: 1080px;
+  border-collapse: collapse;
+  margin: 20px 0px;
+}
+
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-size: 16px;
+}
+
+.columnSearchBox {
+  padding: 10px;
+  border-radius: 5px;
+}
+.arrowUp {
+  position: absolute;
+  font-size: 12px;
+}
+.arrowDown {
+  position: absolute;
+  margin-top: 5px;
+  font-size: 12px;
+}
+#pagination {
+  width: 1080px;
+}
+#records {
+  text-align: center;
+}
+#navigation {
+  text-align: center;
+}
+#navigation button {
+  cursor: pointer;
+}
+#pageNumber {
+  display: inline-block;
+}
+#pageNumber button {
+  margin: 0 5px;
+}
+
+thead,
+tbody,
+tr,
+td,
+th {
+  display: block;
+}
+
+tr:after {
+  content: " ";
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+
+tbody {
+  height: 400px;
+  overflow-y: auto;
+}
+
+tbody td,
+thead th {
+  width: 194px;
+  float: left;
+}
+
+@media only screen and (max-width: 994px),
+  (min-device-width: 768px) and (max-device-width: 994px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+  tr {
+    margin: 0 0 1rem 0;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 30%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  td:nth-of-type(1):before {
+    content: "Country Code";
+  }
+  td:nth-of-type(2):before {
+    content: "Country";
+  }
+  td:nth-of-type(3):before {
+    content: "Capital";
+  }
+  td:nth-of-type(4):before {
+    content: "Region";
+  }
+  td:nth-of-type(5):before {
+    content: "Population";
+  }
+  tbody td,
+  thead th {
+    clear: both;
+  }
+  .globalSearchContainer {
+    float: none;
+    margin-top: 10px;
+  }
+  #pagination {
+    position: absolute;
+    top: 0;
+    left: -300px;
+  }
+}

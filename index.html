@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script async src="./script.js"></script>
+    <title>Zeta Datatable Assignment</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="limitContainer">
+          Show
+          <select onchange="changeLimit(this.value)"> </select>
+          entries
+        </div>
+        <div class="globalSearchContainer">
+          Search:
+          <input
+            type="text"
+            onkeyup="globalSearch(this.value)"
+            class="columnSearchBox"
+            placeholder="Search for any column"
+          />
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <p id="alpha3Code">Country Code</p>
+              <input
+                type="text"
+                name="alpha3Code"
+                onkeyup="filter(this.name,this.value)"
+                class="columnSearchBox"
+                placeholder="All"
+              />
+            </th>
+            <th>
+              <p id="name">
+                Country Name
+              </p>
+              <input
+                type="text"
+                name="name"
+                onkeyup="filter(this.name,this.value)"
+                class="columnSearchBox"
+                placeholder="All"
+              />
+            </th>
+            <th>
+              <p id="capital">Capital</p>
+              <input
+                type="text"
+                name="capital"
+                onkeyup="filter(this.name,this.value)"
+                class="columnSearchBox"
+                placeholder="All"
+              />
+            </th>
+            <th>
+              <p id="region">Region</p>
+              <input
+                type="text"
+                name="region"
+                onkeyup="filter(this.name,this.value)"
+                class="columnSearchBox"
+                placeholder="All"
+              />
+            </th>
+            <th>
+              <p id="population">Population</p>
+              <input
+                type="text"
+                name="population"
+                onkeyup="filter(this.name,this.value)"
+                class="columnSearchBox"
+                placeholder="All"
+              />
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <div id="pagination">
+        <div id="records"></div>
+        <div id="navigation">
+          <button id="btn_prev" onclick="prev()">Prev</button>
+          <div id="pageNumber">
+          </div>
+          <button id="btn_next" onclick="next()">Next</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
